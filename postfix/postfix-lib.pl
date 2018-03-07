@@ -36,7 +36,6 @@ if (!$postfix_version) {
 
 if (&compare_version_numbers($postfix_version, 2) >= 0) {
 	$virtual_maps = "virtual_alias_maps";
-	$virtual_extended_maps = "virtual_extended_maps";
 	$ldap_timeout = "ldap_timeout";
 	}
 else {
