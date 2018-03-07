@@ -36,6 +36,7 @@ if (!$postfix_version) {
 
 if (&compare_version_numbers($postfix_version, 2) >= 0) {
 	$virtual_maps = "virtual_alias_maps";
+	$virtual_extended_maps = "virtual_extended_maps";
 	$ldap_timeout = "ldap_timeout";
 	}
 else {
@@ -2227,6 +2228,7 @@ sub file_map_type
 {
 local ($type) = @_;
 return 1 if ($type eq 'hash' || $type eq 'regexp' || $type eq 'pcre' ||
+	     $type eq 'cdb' ||
 	     $type eq 'btree' || $type eq 'dbm' || $type eq 'cidr');
 }
 
